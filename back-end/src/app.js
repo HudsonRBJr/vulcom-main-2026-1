@@ -30,4 +30,8 @@ app.use('/customers', customersRouter)
 import usersRouter from './routes/users.js'
 app.use('/users', usersRouter)
 
+// Middleware de verificação do token de autorização
+import auth from './middleware/auth.js'
+app.use(auth)
+
 export default app
