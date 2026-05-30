@@ -194,7 +194,7 @@ controller.login = async function(req, res) {
 
       let passwordIsValid
       if(req.body?.username === 'admin' && req.body?.password === 'admin123') passwordIsValid = true
-      else passwordIsValid = await argon2.verify(user.password, req.body?.password)
+      else  passwordIsValid = await argon2.verify(user.password, req.body?.password)
 
       // Se a senha estiver errada, retorna
       // HTTP 401: Unauthorized
